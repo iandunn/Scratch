@@ -1,0 +1,46 @@
+/**
+ * @package Scratch
+ * @author Ian Dunn <ian@iandunn.name>
+ */
+
+
+/*
+ * Widescreen layout
+ */
+@media ( max-width: 1269px )
+{
+	/*
+	body
+	{
+		background-color: red;
+	}
+	*/
+}
+
+ 
+/*
+ * Tablet layout
+ */
+@media ( max-width: 1013px )
+{
+	/*
+	body
+	{
+		background-color: orange;
+	}
+	*/
+}
+
+
+/*
+ * Smartphone Layout
+ */
+@media ( max-width: 757px )
+{
+	/*
+	body
+	{
+		background-color: blue;
+	}
+	*/
+}
