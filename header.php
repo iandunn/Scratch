@@ -6,7 +6,7 @@
 	
 <head>
 	<title><?php bloginfo( 'name' ); if( !is_front_page() ) wp_title(); ?></title>
-	<link rel="stylesheet" type="text/css" href="<?php echo Scratch::$templateURL . '/style.css'; ?>" media="all" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Scratch::$templateURL . '/css/main.css'; ?>" media="all" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Scratch::$templateURL . '/css/templates.css'; ?>" media="all" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Scratch::$templateURL . '/css/mobile.css'; ?>" media="all" />
 
