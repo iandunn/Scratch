@@ -1,22 +1,19 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
+<?php if( have_posts() ) : ?>
+	<?php while( have_posts() ) : ?>
+		<?php the_post(); ?>
+		<?php get_template_part( 'loop', 'default' ); ?>
+	<?php endwhile; ?>
+<?php else : ?>
+	<?php get_template_part( 'loop', 'no-posts-found' ); ?>
+<?php endif; ?>
 
-if( have_posts() )
-{
-	while( have_posts() )
-	{
-		the_post();
-		get_template_part( 'loop', 'default' );
-	}
-}
-else
-	get_template_part( 'loop', 'no-posts-found' );
 
-if( is_single() )
-	comments_template( '', true );
+<?php if( is_single() ) : ?>
+	<?php comments_template( '', true ); ?>
+<?php endif; ?>
 
-?>
 
 <?php if( $wp_query->max_num_pages > 1 ) : ?>
 	<div id="nav-below" class="navigation">

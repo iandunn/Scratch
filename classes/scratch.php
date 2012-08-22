@@ -8,7 +8,7 @@ if( !class_exists( 'Scratch' ) )
 	 */
 	class Scratch
 	{
-		public static $siteURL, $templateURL;
+		public static $siteURL, $templateURL, $languageAttributes;
 		protected static $version = 0.1;
 		
 		/**
@@ -42,8 +42,20 @@ if( !class_exists( 'Scratch' ) )
 		 */
 		public static function assignVars()
 		{
-			self::$siteURL		= site_url();
-			self::$templateURL	= get_bloginfo('template_url');
+			self::$siteURL				= site_url();
+			self::$templateURL			= get_bloginfo( 'template_url' );
+			self::$languageAttributes	= self::getLanguageAttributes( 'xhtml' );
+		}
+		
+		/**
+		 * Returns the output of language_attributes()
+		 * @author Ian Dunn <ian@iandunn.name>
+		 */
+		public static function getLanguageAttributes( $doctype )
+		{
+			ob_start();
+			language_attributes( $doctype ); 
+			return ob_get_clean();
 		}
 		
 		/**

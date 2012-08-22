@@ -8,8 +8,9 @@ Disclaimer: This isn't anywhere near finished yet.
 ## Features
 
 * Minimal, clean and organized
-* Valid XHTML 1.0 and CSS 2
-* Supporting PHP and JavaScript follow Object Oriented and MVC design patterns
+* Output is [sanitized](http://codex.wordpress.org/Data_Validation) when appropriate
+* Valid XHTML 1.0 and CSS 2 (except for YUI Reset and Base)
+* Supporting PHP and JavaScript files follow Object Oriented and MVC design patterns
 * CSS built on top of YUI Reset and Base
 
 
@@ -32,35 +33,39 @@ Disclaimer: This isn't anywhere near finished yet.
 * Rename classes/scratch.php and js/scratch.js to the theme slug
 * Rename files you don't think you'll to to _[original-name]. Delete them before pushing to production if you don't end up using them.
 * Update style.css headers and header.php meta tags
+* Update copyright dates in footer.php
 
 
 ## TODO
 
-* Make sure all files are escaping output
-	* Add as feature when done
-* Convert to HTML5
-	* Add shims for HTML5 and media queries
-		* Make sure they don't crash IE
+* High Priority
+	* Convert to HTML5
+		* Add shims for HTML5 and media queries
+			* Make sure they don't crash IE
+			* Add to features list when done
+		* Update self::getLanguageAttributes() param
+		* Do a good round of testing across browsers and devices
 		* Add to features list when done
-	* Do a good round of testing across browsers and devices
-	* Add to features list when done
-* Add in good stuff from HTML5 Boilerplate
-	* Add as feature when done
-* Check Underscores and Bones for ideas
-* Check 320 And Up for some responsive ideas
-	* Make sure media queries target the current window size, not the potential size. If a desktop browser window is 300px wide, it should get the mobile layout.
-	* Add 'responsive' to features list when done 
-* Run against YSlow
-	* Add score as feature when done
-* Do another good round of testing across browsers and devices
-* Run against the WP theme checker
-* Check with WP theme unit test content
-* Implement magic get/set methods in functions.php?
-* Maybe add sample AJAX event handler and response handler, but commented out by default
-* Maybe add Scratch as submodule to your WordPress Skeleton fork
-* Make a nice default screenshot
-* Move all templates into a /templates/ directory if the appropriate filters are ever added. See [#14310](http://core.trac.wordpress.org/ticket/14310), [#21062](http://core.trac.wordpress.org/ticket/21062) and [#13239](http://core.trac.wordpress.org/ticket/13239).
-* Try to use /css/main.css for theme headers so you can delete /style.css
-	* If can't, submit a ticket/patch to Trac
-* Try to use /images/screenshot.png instead of /screenshot.png
-	* If can't, submit a ticket/patch to Trac
+	* Add in good stuff from HTML5 Boilerplate
+		* Add as feature when done
+	* Check Underscores and Bones for ideas
+	* Check 320 And Up for some responsive ideas
+		* Make sure media queries target the current window size, not the potential size. If a desktop browser window is 300px wide, it should get the mobile layout.
+		* Add 'responsive' to features list when done 
+	* Run against YSlow
+		* Add score as feature when done
+	* Do another good round of testing across browsers and devices
+	* Run against the WP theme checker
+	* Check with WP theme unit test content
+	* Move all templates into a /templates/ directory if the appropriate filters are ever added. See [#14310](http://core.trac.wordpress.org/ticket/14310), [#21062](http://core.trac.wordpress.org/ticket/21062) and [#13239](http://core.trac.wordpress.org/ticket/13239).
+
+* Low Priority
+	* Maybe add sample AJAX event handler and response handler, but commented out by default
+	* Maybe Implement magic get/set methods in functions.php
+	* Maybe add Scratch as submodule to your WordPress Skeleton fork
+	* Maybe do a loop in functions.php to read all the files in the classes directory and automatically require them, or look into autoloading
+	* Make a nice default screenshot	
+	* Try to use /css/main.css for theme headers so you can delete /style.css
+		* If can't, submit a ticket/patch to Trac
+	* Try to use /images/screenshot.png instead of /screenshot.png
+		* If can't, submit a ticket/patch to Trac
